@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>간병인신청 항목선택</title>
+  <style>
+    .container1 {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 1px 1px;
+    }
+    .row1 {
+      background-color: #d7bee2;
+    }
+    .row2 {
+      background-color: #a9c7d8;
+    }
+    .row3 {
+      background-color: #c0df9f;
+    }
+    .row4 {
+      background-color: #f2e5a6;
+    }
+    .row5 {
+      background-color: #e89d9d;
+    }
+    .row6 {
+      background-color: #d7bee2;
+    }
+    .row7 {
+      background-color: #a9c7d8;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    간병이 필요하신 항목을 선택해주세요 
+    <input type="checkbox" name="apply[]" value="selectall" onclick='selectAll(this)'/> <b>모두선택/해제</b>
+  </div>
+  <div class="container1">
+    <div class="box row1"><input type="checkbox" id="section" name="apply[]" value="썩션"  > 썩션 </div>
+    <div class="box row1"><input type="checkbox" id="feeding" name="apply[]" value="피딩"  > 피딩 </div>
+    <div class="box row1"><input type="checkbox" id="chimae" name="apply[]" value="치매"  > 치매 </div>
+    <div class="box row1"><input type="checkbox" name="apply[]" value="잠안잠"  > 잠안잠 </div>
+ 
+    <div class="box row2"><input type="checkbox" name="apply[]" value="정형외과"  > 정형외과 </div>
+    <div class="box row2"><input type="checkbox" name="apply[]" value="기저귀"  > 기저귀 </div>
+    <div class="box row2"><input type="checkbox" name="apply[]"  value="암환자"  > 암환자 </div>
+    <div class="box row2"><input type="checkbox" name="apply[]" value="재활환자"  > 재활환자 </div>
+ 
+    <div class="box row3"><input type="checkbox" name="apply[]" value="VRE/CRE"  > VRE/CRE </div>
+    <div class="box row3"><input type="checkbox" name="apply[]" value="경추환자"  > 경추환자 </div>
+    <div class="box row3"><input type="checkbox" name="apply[]" value="격리환자"  > 격리환자 </div>
+    <div class="box row3"><input type="checkbox" name="apply[]" value="전염환자"  > 전염환자 </div>
+   
+    <div class="box row4"><input type="checkbox" name="apply[]" value="단기간병"  > 단기간병 </div>
+    <div class="box row4"><input type="checkbox" name="apply[]" value="장기간병"  > 장기간병 </div>
+    <div class="box row4"><input type="checkbox" name="apply[]" value="폐결핵"  > 폐결핵 </div>
+    <div class="box row4"><input type="checkbox" name="apply[]" value="식사제공"  > 식사제공 </div>
+
+    <div class="box row5"><input type="checkbox" name="apply[]" value="과체중"  > 과체중 </div>
+    <div class="box row5"><input type="checkbox" name="apply[]" value="특급간병"  > 특급간병 </div>
+    <div class="box row5"><input type="checkbox" name="apply[]" value="한국인"  > 한국인 </div>
+    <div class="box row5"><input type="checkbox" name="apply[]" value="완전거동"  > 완전거동 </div>
+
+    <div class="box row6"><input type="checkbox" name="apply[]" value="비용부담"  > 비용부담 </div>
+    <div class="box row6"><input type="checkbox" name="apply[]" value="배상보험"  > 배상보험 </div>
+    <div class="box row6"><input type="checkbox" name="apply[]" value="집)경환자"  > 집)경환자 </div>
+    <div class="box row6"><input type="checkbox" name="apply[]" value="집)중환자"  > 집)중환자 </div>
+
+    <div class="box row7"><input type="checkbox" name="apply[]" value="낮간병"  > 낮간병 </div>
+    <div class="box row7"><input type="checkbox" name="apply[]" value="밤간병"  > 밤간병 </div>
+    <div class="box row7"><input type="checkbox" name="apply[]" value="매주유급"  > 매주유급 </div>
+    <div class="box row7"><input type="checkbox" name="apply[]" value="격주유급"  > 격주유급 </div>
+
+  </div>
+  <script>
+
+    // function selectAll(selectAll) {
+    //   const checkboxs
+    //         = document.getElementsByName('apply[]');    //이것도돼고
+  
+    //   checkboxs.forEach((checkbox) => {
+    //     checkbox.checked = selectAll.checked;
+    //   })
+    // }
+
+    function selectAll(selectAll) {
+      const checkboxs
+            = document.querySelectorAll('input[type="checkbox"]');  //이것도 됨
+     
+      checkboxs.forEach((checkbox) => {
+        checkbox.checked = selectAll.checked;
+      })
+    }
+
+  </script>
+</body>
+</html>
